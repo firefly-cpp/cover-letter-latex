@@ -40,7 +40,7 @@
   \begin{tabular}[t]{l@{}}
     #1
   \end{tabular}}
-\vspace*{6\baselineskip}
+\vspace*{3\baselineskip}
 }
 
 \newcommand{\final}[1]{We believe that the interesting new perspective created by our paper would deserve the attention of a broad scientific audience. We hope that the manuscript will find your interest, and that you will consider it for publication in #1}
