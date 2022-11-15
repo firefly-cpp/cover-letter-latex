@@ -1,0 +1,54 @@
+\documentclass[red]{icoverletter}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{framed}
+\usepackage{lipsum}
+
+\begin{document}
+
+\large 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%change according to your data
+
+% journal name
+\def \journal {Neurocomputing}
+% title of your paper
+\def \title {A review of numerical association rule mining}
+% name of the EiC
+\def \editor {Prof. Name Surname}
+% TODO make this optional
+\def \specialissue {SI 2022}
+
+% my name
+\aboutme{Iztok Fister Jr. \\
+			   University of Maribor \\
+			   Faculty of Electrical Engineering \\ and Computer Science \\
+				Koro\v{s}ka cesta 46 \\
+				2000 Maribor, Slovenia}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\date{\today} 
+
+To the editor: \editor
+
+Dear Editor:
+
+We submit our paper titled: \title , which we would like to be considered for publication in \journal. Our paper belongs to the special issue \specialissue
+
+\begin{framed}
+Abstract: \lipsum[1]
+\end{framed}
+
+\final{\journal} \newline
+
+\declaration \newline
+
+\conflictofinterest \newline
+
+Sincerely yours,
+
+Iztok Fister Jr., on behalf of all authors
+
+\end{document}
