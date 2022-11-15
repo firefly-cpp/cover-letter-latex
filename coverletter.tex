@@ -3,10 +3,11 @@
 \usepackage[english]{babel}
 \usepackage{framed}
 \usepackage{lipsum}
+\usepackage[iso,american]{isodate}
 
 \begin{document}
 
-\large 
+\large
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %change according to your data
@@ -29,11 +30,16 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\date{\today} 
+\noindent\makebox[\linewidth]{\rule{0.9\paperwidth}{0.4pt}}
+
+\today
+\vspace*{2\baselineskip}
 
 To the editor: \editor
+\vspace*{1\baselineskip}
 
-Dear Editor:
+
+Dear Editor,
 
 We submit our paper titled: \title , which we would like to be considered for publication in \journal. Our paper belongs to the special issue \specialissue
 
