@@ -6,6 +6,15 @@
 \RequirePackage{fancyhdr}
 \RequirePackage[skip=10pt plus1pt, indent=40pt]{parskip}
 
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{framed}
+\usepackage{lipsum}
+\usepackage[iso,american]{isodate}
+
+% no indent for whole document
+\setlength\parindent{0pt}
+
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
 
@@ -27,7 +36,7 @@
 
 % define a command for the address of authors
 \newcommand{\aboutme}[1]{
-\noindent
+%\noindent
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -43,8 +52,90 @@
 \vspace*{3\baselineskip}
 }
 
-\newcommand{\final}[1]{We believe that the interesting new perspective created by our paper would deserve the attention of a broad scientific audience. We hope that the manuscript will find your interest, and that you will consider it for publication in #1}
+% Name and Surname of the sender
+\def\NameSurname#1{\def\@NameSurname{#1}}
+\newcommand{\pNameSurname}{\@NameSurname}
+% name of the instituion
+\def\InstitutionName#1{\def\@InstitutionName{#1}}
+\newcommand{\pInstitutionName}{\@InstitutionName}
+% Command for Faculty of Electrical Engineering ....
+\newcommand{\Feri}[1]{University of Maribor \\
+			   Faculty of Electrical Engineering \\ and Computer Science \\}
+% Street and House No.      
+\def\StreetNo#1{\def\@StreetNo{#1}}
+\newcommand{\pStreetNo}{\@StreetNo}
+% Postal code, City, Country
+\def\CityPostal#1{\def\@CityPostal{#1}}
+\newcommand{\pCityPostal}{\@CityPostal}
+% journal name
+\def\JournalName#1{\def\@JournalName{#1}}
+\newcommand{\pJournalName}{\@JournalName}
+% title of your paper
+\def\Title#1{\def\@Title{#1}}
+\newcommand{\pTitle}{\@Title}
+% name of the EiC
+\def\Editor#1{\def\@Editor{#1}}
+\newcommand{\pEditor}{\@Editor}
+% TODO make this optional
+\def\SpecialIssue#1{\def\@SpecialIssue{#1}}
+\newcommand{\pSpecialIssue}{\@SpecialIssue}
 
-\newcommand{\declaration}[1]{This manuscript is the authors' original work and has not been published nor has it been submitted simultaneously elsewhere. All authors have checked the manuscript and have agreed to the submission. \\}
+\def\abstract#1{\def\@abstract{#1}}
+\newcommand{\pabstract}{\@abstract}
 
-\newcommand{\conflictofinterest}[1]{We have no conflicts of interest to disclose. \\}
+\def\final#1{\def\@final{#1}}
+\newcommand{\pfinal}{\@final}
+
+\def\declaration#1{\def\@declaration{#1}}
+\newcommand{\pdeclaration}{\@declaration}
+
+\def\conflictofinterest#1{\def\@conflictofinterest{#1}}
+\newcommand{\pconflictofinterest}{\@conflictofinterest}
+
+\def\valediction#1{\def\@valediction{#1}}
+\newcommand{\pvalediction}{\@valediction}
+
+\newcommand{\yourssincerely}[1]{Yours sincerely,\\}
+\newcommand{\yoursfaithfully}[1]{Yours faithfully,\\}
+\newcommand{\yourstruly}[1]{Yours truly,\\}
+
+
+\newcommand{\makecoverletter}{
+\large % Font size
+\aboutme{
+    \pNameSurname \\
+    \pInstitutionName\\
+    \pStreetNo\\
+    \pCityPostal
+    }
+%---------------------------------
+
+\noindent\makebox[\linewidth]{\rule{0.9\paperwidth}{0.4pt}}
+
+% Date
+\today
+\vspace*{2\baselineskip}
+
+To the editor: \pEditor
+
+\vspace*{1\baselineskip}
+Dear Editor,
+
+We submit our paper titled: \pTitle , which we would like to be considered for publication in \pJournalName. Our paper belongs to the special issue \pSpecialIssue
+
+\begin{framed}
+Abstract: \pabstract
+\end{framed}
+
+\pfinal{\pJournalName} \newline
+
+\pdeclaration \newline
+
+\pconflictofinterest \newline
+
+\vfill
+
+\pvalediction \par
+
+\pNameSurname, on behalf of all authors
+}

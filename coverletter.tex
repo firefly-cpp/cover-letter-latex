@@ -1,60 +1,39 @@
 \documentclass{icoverletter}
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
-\usepackage{framed}
-\usepackage{lipsum}
-\usepackage[iso,american]{isodate}
+
+
+%----------------------------------------------------------------------
+%change according to your data
+\NameSurname{Iztok Fister Jr.}
+% name of the institution
+% predefined institution - \Feri
+\InstitutionName{\Feri}
+% address 1 - street name and house number
+\StreetNo{Koro\v{s}ka cesta 46}
+% address 2 - postal code, city, country
+\CityPostal{2000 Maribor, Slovenia}
+% journal name
+\JournalName{Neurocomputing}
+% title of your paper
+\Title{A review of numerical association rule mining}
+% name of the EiC
+\Editor{Prof. Name Surname}
+% TODO make this optional
+\SpecialIssue{SI 2022}
+% abstract of the submitted Article
+\abstract{\lipsum[1]}
+% ending
+\final{We believe that the interesting new perspective created by our paper would deserve the attention of a broad scientific audience. We hope that the manuscript will find your interest, and that you will consider it for publication in }
+% original work declaration
+\declaration{This manuscript is the authors' original work and has not been published nor has it been submitted simultaneously elsewhere. All authors have checked the manuscript and have agreed to the submission.}
+% no conflicts of interest
+\conflictofinterest{We have no conflicts of interest to disclose.}
+
+% \yoursfaithfully % In case we do not know the name of the Editor
+% \yourssincerely % In case we knwo the name of the Editor
+% \yourstruly % American version of Yours faihtfully
+\valediction{\yourssincerely}
+%----------------------------------------------------------------------
 
 \begin{document}
-
-\large
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%change according to your data
-
-% journal name
-\def \journal {Neurocomputing}
-% title of your paper
-\def \title {A review of numerical association rule mining}
-% name of the EiC
-\def \editor {Prof. Name Surname}
-% TODO make this optional
-\def \specialissue {SI 2022}
-
-% my name
-\aboutme{Iztok Fister Jr. \\
-			   University of Maribor \\
-			   Faculty of Electrical Engineering \\ and Computer Science \\
-				Koro\v{s}ka cesta 46 \\
-				2000 Maribor, Slovenia}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\noindent\makebox[\linewidth]{\rule{0.9\paperwidth}{0.4pt}}
-
-\today
-\vspace*{2\baselineskip}
-
-To the editor: \editor
-\vspace*{1\baselineskip}
-
-
-Dear Editor,
-
-We submit our paper titled: \title , which we would like to be considered for publication in \journal. Our paper belongs to the special issue \specialissue
-
-\begin{framed}
-Abstract: \lipsum[1]
-\end{framed}
-
-\final{\journal} \newline
-
-\declaration \newline
-
-\conflictofinterest \newline
-
-Sincerely yours,
-
-Iztok Fister Jr., on behalf of all authors
-
+\makecoverletter
 \end{document}
