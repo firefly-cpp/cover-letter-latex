@@ -55,7 +55,10 @@
 % Name and Surname of the sender
 \def\NameSurname#1{\def\@NameSurname{#1}}
 \newcommand{\pNameSurname}{\@NameSurname}
-% name of the instituion
+% Orcid ID of author
+\def\AuthorOrcid#1{\def\@AuthorOrcid{#1}}
+\newcommand{\pAuthorOrcid}{\@AuthorOrcid}
+% name of the institution
 \def\InstitutionName#1{\def\@InstitutionName{#1}}
 \newcommand{\pInstitutionName}{\@InstitutionName}
 % Command for Faculty of Electrical Engineering ....
@@ -103,7 +106,7 @@
 \newcommand{\makecoverletter}{
 \large % Font size
 \aboutme{
-    \pNameSurname \\
+    \pNameSurname \orcidlink{\pAuthorOrcid}\\
     \pInstitutionName\\
     \pStreetNo\\
     \pCityPostal
