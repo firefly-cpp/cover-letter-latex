@@ -28,6 +28,7 @@
 \addtolength{\evensidemargin}{-.800in}
 \addtolength{\textwidth}{1.75in}
 \addtolength{\topmargin}{-.800in}
+\setlength{\headheight}{84.0pt}
 \addtolength{\textheight}{1.75in}
 
 % set a little indendation for paragraphs
@@ -51,7 +52,7 @@
   \begin{tabular}[t]{l@{}}
     #1
   \end{tabular}}
-\vspace*{3\baselineskip}
+%\vspace*{3\baselineskip}
 }
 
 % Name and Surname of the sender
