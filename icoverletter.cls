@@ -21,6 +21,8 @@
 % load class
 \LoadClass[a4paper,onecolumn]{article}
 
+\usepackage{orcidlink}
+
 % set margins
 \addtolength{\oddsidemargin}{-.800in}
 \addtolength{\evensidemargin}{-.800in}
@@ -102,7 +104,6 @@
 \newcommand{\yoursfaithfully}[1]{Yours faithfully,\\}
 \newcommand{\yourstruly}[1]{Yours truly,\\}
 
-
 \newcommand{\makecoverletter}{
 \large % Font size
 \aboutme{
@@ -142,3 +143,4 @@ Abstract: \pabstract
 
 \pNameSurname, on behalf of all authors
 }
+
