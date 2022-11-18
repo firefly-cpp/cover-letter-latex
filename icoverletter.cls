@@ -4,7 +4,7 @@
 % include dependencies
 \RequirePackage{graphicx}
 \RequirePackage{fancyhdr}
-\RequirePackage[skip=10pt plus1pt, indent=40pt]{parskip}
+\RequirePackage{parskip}
 
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
