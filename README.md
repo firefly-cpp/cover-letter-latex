@@ -1,5 +1,5 @@
-# cover-letter-latex
-A cover letter template for a journal paper submission in Latex
+## Description
+The repository hosts a cover letter template for journal submissions written in Latex. 
 
 
 ## Disclaimer
