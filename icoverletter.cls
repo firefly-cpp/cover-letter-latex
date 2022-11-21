@@ -29,7 +29,7 @@
 \addtolength{\textwidth}{1.75in}
 \addtolength{\topmargin}{-.800in}
 \setlength{\headheight}{84.0pt}
-\addtolength{\textheight}{1.75in}
+\addtolength{\textheight}{1in}
 
 % set a little indendation for paragraphs
 \setlength{\parindent}{0.1em}
@@ -136,12 +136,11 @@ Abstract: \pabstract
 
 \pdeclaration \newline
 
-\pconflictofinterest \newline
+\pconflictofinterest 
 
 \vfill
 
-\pvalediction \par
+\pvalediction\par
 
 \pNameSurname, on behalf of all authors
 }
-
