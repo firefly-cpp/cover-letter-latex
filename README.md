@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="logo" width="300" src="https://raw.githubusercontent.com/rhododendrom/cover-letter-latex/imgs/logo.png">
+  <img alt="logo" width="300" src="https://github.com/rhododendrom/cover-letter-latex/imgs/logo.png">
 </p>
 
 ## Description
