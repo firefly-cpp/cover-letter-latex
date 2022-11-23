@@ -1,3 +1,7 @@
+<p align="center">
+  <img alt="logo" width="300" src="imgs/logo.png">
+</p>
+
 ## Description
 The repository hosts a cover letter template for journal submissions written in Latex. 
 
