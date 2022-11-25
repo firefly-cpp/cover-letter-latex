@@ -5,12 +5,12 @@
 \RequirePackage{graphicx}
 \RequirePackage{fancyhdr}
 \RequirePackage{parskip}
-
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
-\usepackage{framed}
-\usepackage{lipsum}
-\usepackage[iso,american]{isodate}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[english]{babel}
+\RequirePackage{framed}
+\RequirePackage{lipsum}
+\RequirePackage[iso,american]{isodate}
+\RequirePackage{etoolbox}
 
 % no indent for whole document
 \setlength\parindent{0pt}
@@ -52,7 +52,18 @@
   \begin{tabular}[t]{l@{}}
     #1
   \end{tabular}}
-%\vspace*{3\baselineskip}
+}
+
+\newcommand{\recommendedReviewer}[3]{%
+    \ifstrempty{#1}%
+        {%
+            %
+        }{%
+        Recommended reviewer:\par
+            #1\par% If #1 is not empty
+            #2\par
+            #3\par
+        }%
 }
 
 % Name and Surname of the sender
@@ -121,6 +132,8 @@
 \today
 \vspace*{2\baselineskip}
 
+\recommendedReviewer{Ime Priimek}{institucija}{email}
+
 To the editor: \pEditor
 
 \vspace*{1\baselineskip}
@@ -137,6 +150,7 @@ Abstract: \pabstract
 \pdeclaration \newline
 
 \pconflictofinterest 
+
 
 \vfill
 
