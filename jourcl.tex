@@ -1,0 +1,84 @@
+\documentclass{jourcl}
+
+% Custom image -- already included: feri_logo_slo.png, feri_logo_eng.png, um-logo.png
+\ImagePath{imgs/feri_logo_eng.png}
+
+% recommended Editors / Reviewers -- change according to your data
+%----------------------------------------------------------------------
+
+% If you have recommended Editors / Reviewers
+%  Example 
+%\FirstRecommended{Reviewer}
+%\FirstNameSurname{Iztok Fister JR}
+%\FirstInstitution{\Feri}
+%\FirstEmail{iztok@iztok-jr-fister.eu}
+%\SecondRecommended{Reviewer}
+%\SecondNameSurname{Rok Kukovec}
+%\SecondInstitution{\Feri}
+%\SecondEmail{rok.kukovec@um.si}
+%\ThirdRecommended{Role}
+%\ThirdNameSurname{Janez Novak}
+%\ThirdInstitution{University of Maribor Faculty of Electrical Engineering and Computer Science}
+%\ThirdEmail{janez.novak@um.si}
+
+% Else - leave blank
+\FirstRecommended{}\FirstNameSurname{}\FirstInstitution{}\FirstEmail{}
+\SecondRecommended{}\SecondNameSurname{}\SecondInstitution{}\SecondEmail{}
+\ThirdRecommended{}\ThirdNameSurname{}\ThirdInstitution{}\ThirdEmail{}
+
+%----------------------------------------------------------------------
+% Your data
+%----------------------------------------------------------------------
+% change according to your data
+\NameSurname{Iztok Fister Jr.}
+% Orcid ID of author
+\AuthorOrcid{0000-0002-6418-1272}
+% name of the institution
+% predefined institution - \Feri - University of Maribor Faculty of Electrical Engineering and Computer Science
+\InstitutionName{\Feri}
+% address 1 - street name and house number
+\StreetNo{Koro\v{s}ka cesta 46}
+% address 2 - postal code, city, country
+\CityPostal{2000 Maribor, Slovenia}
+% journal name
+\JournalName{Neurocomputing}
+% title of your paper
+\Title{A review of numerical association rule mining}
+% name of the EiC
+\Editor{Prof. Name Surname}
+% TODO make this optional
+\SpecialIssue{SI 2022}
+
+%----------------------------------------------------------------------
+% Cover letter main part
+%----------------------------------------------------------------------
+% Addressing the Person
+\PersonAddressing{Dear Editor}
+
+% introduction
+\Introduction{We submit our paper titled: \pTitle , which we would like to be considered for publication in \pJournalName. Our paper belongs to the special issue \pSpecialIssue}
+
+% abstract of the submitted Article
+\abstract{\lipsum[1]}
+
+% ending
+\final{We believe that an interesting new perspective created by our paper would deserve the attention of a broad scientific audience. We hope that the manuscript will find your interest and that you will consider it for publication in}
+
+% original work declaration
+\declaration{This manuscript is the authors' original work and has not been published nor has it been submitted simultaneously elsewhere. All authors have checked the manuscript and have agreed to the submission.}
+% no conflicts of interest
+\conflictofinterest{We have no conflicts of interest to disclose.}
+
+% change valediction in \valediction{ \OPTION_HERE }
+% \yoursfaithfully % In case we do not know the name of the Editor
+% \yourssincerely % In case we know the name of the Editor
+% \yourstruly % American version of Yours faithfully
+\valediction{\yourssincerely}
+%----------------------------------------------------------------------
+
+%----------------------------------------------------------------------
+% Render document
+%----------------------------------------------------------------------
+\begin{document}
+\makecoverletter
+\end{document}
