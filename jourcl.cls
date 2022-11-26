@@ -23,6 +23,9 @@
 
 \RequirePackage{orcidlink}
 
+% for icons
+\RequirePackage{fontawesome5}
+
 % set margins
 \addtolength{\oddsidemargin}{-.800in}
 \addtolength{\evensidemargin}{-.800in}
@@ -148,6 +151,12 @@
 \def\CityPostal#1{\def\@CityPostal{#1}}
 \newcommand{\pCityPostal}{\@CityPostal}
 
+% Email
+\def\Email#1{\def\@Email{#1}}
+\newcommand{\pEmail}{\@Email}
+% Phone
+\def\Phone#1{\def\@Phone{#1}}
+\newcommand{\pPhone}{\@Phone}
 % Submission data
 %----------------------------------------------------------------------
 % journal name
@@ -207,22 +216,28 @@
 \large % Font size
 \aboutme{
     \pNameSurname \orcidlink{\pAuthorOrcid}\\
-    \pInstitutionName\\
+    \faIcon{university} \pInstitutionName\\
     \pStreetNo\\
-    \pCityPostal
+    \pCityPostal\\
+    \faIcon{envelope} \pEmail \\
+    \faIcon{phone-square-alt} \pPhone
     }
 %---------------------------------
 
-\noindent\makebox[\linewidth]{\rule{0.9\paperwidth}{0.4pt}}
-
-% Today's date
-\today
+% Command to add reviewers in cover letter
+\newcommand{\addreviewers} {
 % Recommended people
 \begin{center}
 \parbox{.32\linewidth}{ \RecommendedPerson{\pFirstRecommended}{\pFirstNameSurname}{\pFirstInstitution}{\pFirstEmail} }
 \parbox{.32\linewidth}{ \RecommendedPerson{\pSecondRecommended}{\pSecondNameSurname}{\pSecondInstitution}{\pSecondEmail} }
 \parbox{.32\linewidth}{ \RecommendedPerson{\pThirdRecommended}{\pThirdNameSurname}{\pThirdInstitution}{\pThirdEmail} }
 \end{center}
+}
+
+\noindent\makebox[\linewidth]{\rule{0.9\paperwidth}{0.4pt}}
+
+% Today's date
+\today
 
 To the editor: \pEditor
 
@@ -234,6 +249,8 @@ To the editor: \pEditor
 \begin{framed}
 Abstract: \pabstract
 \end{framed}
+
+\addreviewers
 
 \pfinal{ \pJournalName.} \newline
 
