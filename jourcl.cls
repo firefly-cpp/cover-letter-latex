@@ -201,6 +201,7 @@
 \newcommand{\yourssincerely}[1]{Yours sincerely,\\}
 \newcommand{\yoursfaithfully}[1]{Yours faithfully,\\}
 \newcommand{\yourstruly}[1]{Yours truly,\\}
+\newcommand{\bestregards}[1]{Best regards,\\}
 
 \newcommand{\makecoverletter}{
 \large % Font size
