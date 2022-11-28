@@ -1,4 +1,5 @@
-\documentclass{jourcl}
+% options for positioning of recommended Editors / Reviewers: top, afterToEditor, afterIntroduction, afterAbstract, bottom
+\documentclass[afterAbstract]{jourcl}
 
 % Custom image -- already included: feri_logo_slo.png, feri_logo_eng.png, um-logo.png
 \ImagePath{imgs/feri_logo_eng.png}
@@ -7,7 +8,7 @@
 %----------------------------------------------------------------------
 
 % If you have recommended Editors / Reviewers
-%  Example 
+% Example 
 %\FirstRecommended{Reviewer}
 %\FirstNameSurname{Iztok Fister JR}
 %\FirstInstitution{\Feri}
@@ -45,6 +46,9 @@
 % phone of author
 \Phone{00000000000}
 
+%----------------------------------------------------------------------
+% Article data
+%----------------------------------------------------------------------
 % journal name
 \JournalName{Neurocomputing}
 % title of your paper
@@ -53,37 +57,40 @@
 \Editor{Prof. Name Surname}
 % TODO make this optional
 \SpecialIssue{SI 2022}
+% abstract of the submitted Article
+\abstract{\lipsum[1]}
 
 %----------------------------------------------------------------------
 % Cover letter main part
 %----------------------------------------------------------------------
+% No need to change the following part - here for customization
+
+% Custom "To the editor: Editor Name"
+\toEditor{To the editor: \pEditor}
+
 % Addressing the Person
 \PersonAddressing{Dear Editor}
 
 % introduction
 \Introduction{We submit our paper titled: \pTitle , which we would like to be considered for publication in \pJournalName. Our paper belongs to the special issue \pSpecialIssue}
 
-% abstract of the submitted Article
-\abstract{\lipsum[1]}
-
-% add recommended reviewers (if any)
-% TODO
-
 % ending
-\final{We believe that an interesting new perspective created by our paper would deserve the attention of a broad scientific audience. We hope that the manuscript will find your interest and that you will consider it for publication in}
+\final{We believe that an interesting new perspective created by our paper would deserve the attention of a broad scientific audience. We hope that the manuscript will find your interest and that you will consider it for publication in \pJournalName.}
 
 % original work declaration
 \declaration{This manuscript is the authors' original work and has not been published nor has it been submitted simultaneously elsewhere. All authors have checked the manuscript and have agreed to the submission.}
+
 % no conflicts of interest
 \conflictofinterest{We have no conflicts of interest to disclose.}
 
-% change valediction in \valediction{ \OPTION_HERE }
+% change valediction in \valediction{ \OPTION_HERE } or \valediction{ Custom text }
 % \yoursfaithfully % In case we do not know the name of the Editor
 % \yourssincerely % In case we know the name of the Editor
 % \yourstruly % American version of Yours faithfully
 % \bestregards
 \valediction{\yourssincerely}
-%----------------------------------------------------------------------
+
+\signature{\pNameSurname, on behalf of all authors}
 
 %----------------------------------------------------------------------
 % Render document

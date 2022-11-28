@@ -10,21 +10,49 @@
 \RequirePackage{framed}
 \RequirePackage{lipsum}
 \RequirePackage[iso,american]{isodate}
-\RequirePackage{etoolbox}
+\RequirePackage{fontawesome5}
 
 % no indent for whole document
 \setlength\parindent{0pt}
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
+
+%----------------------------------------------------------------------
+% Position of reviewers
+%----------------------------------------------------------------------
+
+% Top position of reviewers
+\DeclareOption{top}{%
+    \newcommand{\addreviewersPosition}{1}
+}
+% Top position of reviewers
+\DeclareOption{afterToEditor}{%
+    \newcommand{\addreviewersPosition}{2}
+}
+% Position after introduction
+\DeclareOption{afterIntroduction}{%
+    \newcommand{\addreviewersPosition}{3}
+}
+% Position after abstract
+\DeclareOption{afterAbstract}{%
+    \newcommand{\addreviewersPosition}{4}
+}
+% Position bottom - After final
+\DeclareOption{bottom}{%
+    \newcommand{\addreviewersPosition}{5}
+}
+
+%----------------------------------------------------------------------
+% process options
 \ProcessOptions\relax
+
+% styling of document
+%----------------------------------------------------------------------
 
 % load class
 \LoadClass[a4paper,onecolumn]{article}
 
 \RequirePackage{orcidlink}
-
-% for icons
-\RequirePackage{fontawesome5}
 
 % set margins
 \addtolength{\oddsidemargin}{-.800in}
@@ -40,11 +68,14 @@
 % space between paragraphs
 \setlength{\parskip}{1em}
 
-% Custom Role of first recommended person
+
+%----------------------------------------------------------------------
+% Path to logo image
 \def\ImagePath#1{\def\@ImagePath{#1}}
 \newcommand{\pImagePath}{\@ImagePath}
 
-% define a command for the address of authors
+%----------------------------------------------------------------------
+% new command for the information of author
 \newcommand{\aboutme}[1]{
 %\noindent
 \fancyfoot{}
@@ -106,7 +137,6 @@
 \def\ThirdEmail#1{\def\@ThirdEmail{#1}}
 \newcommand{\pThirdEmail}{\@ThirdEmail}
 %----------------------------------------------------------------------
-
 % \RecommendedPerson{Role}{Name Surname}{Institution}{Email}
 %----------------------------------------------------------------------
 % command to render recommended person - check if empty, check if string is only whitespace, else table
@@ -130,8 +160,11 @@
     \fi
 \fi 
 }
+
+%----------------------------------------------------------------------
 % Your data
 %----------------------------------------------------------------------
+
 % Name and Surname of the sender
 \def\NameSurname#1{\def\@NameSurname{#1}}
 \newcommand{\pNameSurname}{\@NameSurname}
@@ -157,8 +190,11 @@
 % Phone
 \def\Phone#1{\def\@Phone{#1}}
 \newcommand{\pPhone}{\@Phone}
+
+%----------------------------------------------------------------------
 % Submission data
 %----------------------------------------------------------------------
+
 % journal name
 \def\JournalName#1{\def\@JournalName{#1}}
 \newcommand{\pJournalName}{\@JournalName}
@@ -168,6 +204,10 @@
 \newcommand{\pTitle}{\@Title}
 
 % name of the Editor
+\def\toEditor#1{\def\@toEditor{#1}}
+\newcommand{\ptoEditor}{\@toEditor}
+
+% name of the Editor
 \def\Editor#1{\def\@Editor{#1}}
 \newcommand{\pEditor}{\@Editor}
 
@@ -175,8 +215,20 @@
 \def\SpecialIssue#1{\def\@SpecialIssue{#1}}
 \newcommand{\pSpecialIssue}{\@SpecialIssue}
 
+%----------------------------------------------------------------------
 % Cover letter main part
 %----------------------------------------------------------------------
+
+% Command to add reviewers in cover letter
+\newcommand{\addreviewers} {
+% Recommended people
+\begin{center}
+\parbox{.32\linewidth}{ \RecommendedPerson{\pFirstRecommended}{\pFirstNameSurname}{\pFirstInstitution}{\pFirstEmail} }
+\parbox{.32\linewidth}{ \RecommendedPerson{\pSecondRecommended}{\pSecondNameSurname}{\pSecondInstitution}{\pSecondEmail} }
+\parbox{.32\linewidth}{ \RecommendedPerson{\pThirdRecommended}{\pThirdNameSurname}{\pThirdInstitution}{\pThirdEmail} }
+\end{center}
+}
+
 % Addressing the Person
 \def\PersonAddressing#1{\def\@PersonAddressing{#1}}
 \newcommand{\pPersonAddressing}{\@PersonAddressing}
@@ -197,7 +249,6 @@
 \def\declaration#1{\def\@declaration{#1}}
 \newcommand{\pdeclaration}{\@declaration}
 
-
 % Declare no conflict of interests
 \def\conflictofinterest#1{\def\@conflictofinterest{#1}}
 \newcommand{\pconflictofinterest}{\@conflictofinterest}
@@ -212,6 +263,10 @@
 \newcommand{\yourstruly}[1]{Yours truly,\\}
 \newcommand{\bestregards}[1]{Best regards,\\}
 
+% Signature
+\def\signature#1{\def\@signature{#1}}
+\newcommand{\psignature}{\@signature}
+
 \newcommand{\makecoverletter}{
 \large % Font size
 \aboutme{
@@ -222,37 +277,37 @@
     \faIcon{envelope} \pEmail \\
     \faIcon{phone-square-alt} \pPhone
     }
-%---------------------------------
-
-% Command to add reviewers in cover letter
-\newcommand{\addreviewers} {
-% Recommended people
-\begin{center}
-\parbox{.32\linewidth}{ \RecommendedPerson{\pFirstRecommended}{\pFirstNameSurname}{\pFirstInstitution}{\pFirstEmail} }
-\parbox{.32\linewidth}{ \RecommendedPerson{\pSecondRecommended}{\pSecondNameSurname}{\pSecondInstitution}{\pSecondEmail} }
-\parbox{.32\linewidth}{ \RecommendedPerson{\pThirdRecommended}{\pThirdNameSurname}{\pThirdInstitution}{\pThirdEmail} }
-\end{center}
-}
+%----------------------------------------------------------------------
 
 \noindent\makebox[\linewidth]{\rule{0.9\paperwidth}{0.4pt}}
 
 % Today's date
 \today
 
-To the editor: \pEditor
+%\if \addreviewersPosition1 \addreviewers 
+%\fi
+\if\addreviewersPosition1\vspace{-.5cm}\addreviewers\vspace{-.75cm}\fi
+
+\ptoEditor
+
+\if\addreviewersPosition2\vspace{-.3cm}\addreviewers\vspace{-1cm}\fi
 
 \vspace*{1\baselineskip}
 \pPersonAddressing,
 
 \pIntroduction
 
+\if\addreviewersPosition3\vspace{-.5cm}\addreviewers\vspace{-.75cm}\fi
+
 \begin{framed}
 Abstract: \pabstract
 \end{framed}
 
-\addreviewers
+\if\addreviewersPosition4\vspace{-.75cm}\addreviewers\vspace{-.75cm}\fi
 
-\pfinal{ \pJournalName.} \newline
+\pfinal\newline
+
+\if\addreviewersPosition5\vspace{-.75cm}\addreviewers\vspace{-.75cm}\fi
 
 \pdeclaration \newline
 
@@ -262,6 +317,5 @@ Abstract: \pabstract
 
 \pvalediction\par
 
-% Signature
-\pNameSurname, on behalf of all authors
+\psignature
 }
