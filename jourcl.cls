@@ -84,7 +84,9 @@
 \pagestyle{fancy}
   \fancyhf{}
    % show logo of author's institution on the left side
-  \fancyhead[L]{\raisebox{\dimexpr-\height+\baselineskip}[0pt][0pt]{\includegraphics[width=.4\textwidth]{\pImagePath}}}
+  \fancyhead[L]{\raisebox{\dimexpr-\height+\baselineskip}[0pt][0pt]{
+   \includegraphics[width=7cm,height=4cm,keepaspectratio]{\pImagePath}
+  }}
   % show address on the rigt side
   \fancyhead[R]{\leavevmode\large
   \begin{tabular}[t]{l@{}}
