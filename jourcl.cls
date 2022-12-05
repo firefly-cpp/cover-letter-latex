@@ -176,9 +176,6 @@
 % name of the institution
 \def\InstitutionName#1{\def\@InstitutionName{#1}}
 \newcommand{\pInstitutionName}{\@InstitutionName}
-% Command for Faculty of Electrical Engineering ....
-\newcommand{\Feri}[1]{University of Maribor \\
-			   Faculty of Electrical Engineering \\ and Computer Science \\}
 % Street and House No.      
 \def\StreetNo#1{\def\@StreetNo{#1}}
 \newcommand{\pStreetNo}{\@StreetNo}
