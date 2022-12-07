@@ -1,4 +1,4 @@
-# Journal Submissions Cover Letter
+# A cover letter template for a journal paper submission in LaTex
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
@@ -8,7 +8,7 @@
 </p>
 
 ## Description
-Paper submission in the journal is usually accompanied by a cover letter. The repository hosts a cover letter template for journal submissions written in Latex that is minimalistic in one way while pre-defined with several commands that drastically speed up the process of preparing a cover letter for journal submission.
+Paper submission in the journal is usually accompanied by a cover letter. The repository hosts a cover letter template for journal submissions written in LaTex that is minimalistic in one way while pre-defined with several commands that drastically speed up the process of preparing a cover letter for journal submission.
 
 ### Main Features of this template:
 - Custom image
