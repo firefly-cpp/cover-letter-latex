@@ -219,7 +219,7 @@
 %----------------------------------------------------------------------
 
 % Command to add reviewers in cover letter
-\newcommand{\addreviewers} {
+\newcommand{\showreviewers} {
 % Recommended people
 \begin{center}
 \parbox{.32\linewidth}{ \RecommendedPerson{\pFirstRecommended}{\pFirstNameSurname}{\pFirstInstitution}{\pFirstEmail} }
@@ -265,56 +265,3 @@
 % Signature
 \def\signature#1{\def\@signature{#1}}
 \newcommand{\psignature}{\@signature}
-
-\newcommand{\makecoverletter}{
-\large % Font size
-\aboutme{
-    \pNameSurname \orcidlink{\pAuthorOrcid}\\
-    \faIcon{university} \pInstitutionName\\
-    \pStreetNo\\
-    \pCityPostal\\
-    \faIcon{envelope} \pEmail \\
-    \faIcon{phone-square-alt} \pPhone
-    }
-%----------------------------------------------------------------------
-
-\noindent\makebox[\linewidth]{\rule{0.9\paperwidth}{0.4pt}}
-
-% Today's date
-\today
-
-%\if \addreviewersPosition1 \addreviewers 
-%\fi
-\if\addreviewersPosition1\vspace{-.5cm}\addreviewers\vspace{-.75cm}\fi
-
-\ptoEditor
-
-\if\addreviewersPosition2\vspace{-.3cm}\addreviewers\vspace{-1cm}\fi
-
-\vspace*{1\baselineskip}
-\pPersonAddressing,
-
-\pIntroduction
-
-\if\addreviewersPosition3\vspace{-.5cm}\addreviewers\vspace{-.75cm}\fi
-
-\begin{framed}
-Abstract: \pabstract
-\end{framed}
-
-\if\addreviewersPosition4\vspace{-.75cm}\addreviewers\vspace{-.75cm}\fi
-
-\pfinal\newline
-
-\if\addreviewersPosition5\vspace{-.75cm}\addreviewers\vspace{-.75cm}\fi
-
-\pdeclaration \newline
-
-\pconflictofinterest 
-
-\vfill
-
-\pvalediction\par
-
-\psignature
-}

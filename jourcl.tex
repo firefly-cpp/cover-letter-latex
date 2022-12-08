@@ -1,5 +1,4 @@
-% options for the positioning of recommended Editors / Reviewers: top, afterToEditor, afterIntroduction, afterAbstract, bottom
-\documentclass[afterAbstract]{jourcl}
+\documentclass{jourcl}
 
 \ImagePath{imgs/jourcl-logo.png}
 
@@ -17,15 +16,15 @@
 \SecondNameSurname{Name2 Surname2}
 \SecondInstitution{University of City, \\Faculty of Cover Letters}
 \SecondEmail{name2@organization.edu}
-\ThirdRecommended{Editor}
-\ThirdNameSurname{Name3 Surname3}
-\ThirdInstitution{University of City, \\Faculty of Cover Letters}
-\ThirdEmail{name3@organization.edu}
+%\ThirdRecommended{Editor}
+%\ThirdNameSurname{Name3 Surname3}
+%\ThirdInstitution{University of City, \\Faculty of Cover Letters}
+%\ThirdEmail{name3@organization.edu}
 
-% Else - leave blank
+% Else - leave blank. If only 2 reviewers, leave Third..{}
 %\FirstRecommended{}\FirstNameSurname{}\FirstInstitution{}\FirstEmail{}
 %\SecondRecommended{}\SecondNameSurname{}\SecondInstitution{}\SecondEmail{}
-%\ThirdRecommended{}\ThirdNameSurname{}\ThirdInstitution{}\ThirdEmail{}
+\ThirdRecommended{}\ThirdNameSurname{}\ThirdInstitution{}\ThirdEmail{}
 
 %----------------------------------------------------------------------
 % Your data
@@ -91,9 +90,52 @@
 
 \signature{\pNameSurname, on behalf of all authors}
 
+% In this part you can change the position of reviewers
 %----------------------------------------------------------------------
 % Render document
 %----------------------------------------------------------------------
 \begin{document}
-\makecoverletter
+
+\large % Font size
+\aboutme{
+    \pNameSurname \orcidlink{\pAuthorOrcid}\\
+    \faIcon{university} \pInstitutionName\\
+    \pStreetNo\\
+    \pCityPostal\\
+    \faIcon{envelope} \pEmail \\
+    \faIcon{phone-square-alt} \pPhone
+    }
+%----------------------------------------------------------------------
+
+\noindent\makebox[\linewidth]{\rule{0.9\paperwidth}{0.4pt}}
+
+% Today's date
+\today
+
+\ptoEditor
+
+\vspace*{1\baselineskip}
+\pPersonAddressing,
+
+\pIntroduction
+
+\begin{framed}
+Abstract: \pabstract
+\end{framed}
+
+% Improved macro to ensure more freedom for the users. Place it in the position, where you want the reviewers
+\showreviewers 
+\vspace{-.7cm}
+
+\pfinal\newline
+
+\pdeclaration \newline
+
+\pconflictofinterest 
+
+\vfill
+
+\pvalediction\par
+
+\psignature
 \end{document}
