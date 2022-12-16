@@ -1,6 +1,9 @@
 \documentclass{jourcl}
 
+% Path to your logo
 \ImagePath{imgs/jourcl-logo.png}
+% Path to your signature (if you have one). 
+\signaturePath{imgs/jourcl-signature.png}
 
 % recommended Editors / Reviewers -- change according to your data
 %----------------------------------------------------------------------
@@ -125,6 +128,7 @@ Abstract: \pabstract
 
 % Improved macro to ensure more freedom for the users. Place it in the position, where you want the reviewers
 \showreviewers 
+
 \vspace{-.7cm}
 
 \pfinal\newline
@@ -138,4 +142,8 @@ Abstract: \pabstract
 \pvalediction\par
 
 \psignature
+
+% Next line shows your signature. Comment it out if you don't have one / plan to use digital on .pdf
+\showSignature{\pSignaturePath}
+
 \end{document}

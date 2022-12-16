@@ -265,3 +265,12 @@
 % Signature
 \def\signature#1{\def\@signature{#1}}
 \newcommand{\psignature}{\@signature}
+
+% SignaturePath
+\def\signaturePath#1{\def\@signaturePath{#1}}
+\newcommand{\pSignaturePath}{\@signaturePath}
+
+% Show Signature command
+\def \showSignature#1{
+\vspace{-3cm}\begin{flushright}\includegraphics[width=4cm,height=4cm,keepaspectratio]{#1}\end{flushright}
+}

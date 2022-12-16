@@ -20,6 +20,7 @@ Paper submission in the journal is usually accompanied by a cover letter. The re
 - Controls for adding a "Conflict of interest" statement and declaration
 - Predefined different valedictions for different types of submissions (e.g., Yours sincerely, Yours faithfully, Best regards, etc.)
 - Custom greeting (e.g., "Dear Editor" or "Dear Editor-in-Chief" for regular submission, etc.)
+- Option to add custom Signature (i.e. an image of your hand-written signature)
 
 ## Disclaimer
 This software is provided as-is, and there are no guarantees that it fits your purposes or that it is bug-free. Use it at your own risk!
