@@ -22,6 +22,9 @@ Paper submission in the journal is usually accompanied by a cover letter. The re
 - Custom greeting (e.g., "Dear Editor" or "Dear Editor-in-Chief" for regular submission, etc.)
 - Option to add custom Signature (i.e. an image of your hand-written signature)
 
+## Download/Install
+Please install the `jourcl` package through the package manager of your TeX distribution or download it directly from: [CTAN](https://www.ctan.org/pkg/jourcl).
+
 ## Disclaimer
 This software is provided as-is, and there are no guarantees that it fits your purposes or that it is bug-free. Use it at your own risk!
 
