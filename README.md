@@ -1,5 +1,7 @@
 # A cover letter template for a journal paper submission in LaTex
 [![CTAN](https://img.shields.io/ctan/v/jourcl.svg)](https://ctan.org/pkg/jourcl)
+![GitHub repo size](https://img.shields.io/github/repo-size/firefly-cpp/cover-letter-latex?style=flat-square)
+[![GitHub license](https://img.shields.io/github/license/firefly-cpp/cover-letter-latex.svg)](https://github.com/firefly-cpp/cover-letter-latex/blob/master/LICENSE)
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 
 <p align="center">
