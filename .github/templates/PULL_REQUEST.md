@@ -6,4 +6,4 @@ Provide a general description of the code changes in your pull request. Were the
 
 If there's anything else that's important and relevant to your pull request, mention that information here. This could include benchmarks, or other information.
 
-Thanks for contributing to AST-Monitor!
+Thanks for contributing to cover-letter-latex!
