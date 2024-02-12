@@ -8,25 +8,25 @@
   <img alt="logo" width="300" src="imgs/logo.png">
 </p>
 
-## Description
-Paper submission in the journal is usually accompanied by a cover letter. The repository hosts a cover letter template for journal submissions written in LaTex that is minimalistic in one way while pre-defined with several commands that drastically speed up the process of preparing a cover letter for journal submission.
+## Description 📋
+Paper submission in a journal is usually accompanied by a cover letter. 📝 The repository hosts a cover letter template for journal submissions written in LaTeX. The template is minimalistic in one way while pre-defined with several commands that drastically speed up the process of preparing a cover letter for journal submission. ✉️
 
-### Main Features of this template:
-- Minimalistic design
-- Include the custom logo of the affiliation
-- Predefined commands for a journal name, author, date, etc.
-- Many macros contained in this package speed up the process of preparing the necessary ingredients for the cover letter
-- Defined macros for recommending up to 3 reviewers or editor
-- ORCID logo and link to the submitting author's ORCID page
-- Controls for adding a "Conflict of interest" statement and declaration
-- Predefined different valedictions for different types of submissions (e.g., Yours sincerely, Yours faithfully, Best regards, etc.)
-- Custom greeting (e.g., "Dear Editor" or "Dear Editor-in-Chief" for regular submission, etc.)
-- Option to add custom Signature (i.e. an image of your hand-written signature)
+## Key features of this template ✨
+- Minimalistic design 🎨
+- Include the custom logo of the affiliation 🏢
+- Predefined commands for a journal name, author, date, etc. 📅
+- Many macros contained in this package speed up the process of preparing the necessary ingredients for the cover letter ⚙️
+- Defined macros for recommending up to 3 reviewers or editors 👥
+- ORCID logo and link to the submitting author's ORCID page 🔗
+- Controls for adding a "Conflict of interest" statement and declaration 🛡️
+- Predefined different valedictions for different types of submissions (e.g., Yours sincerely, Yours faithfully, Best regards, etc.) 📝
+- Custom greeting (e.g., "Dear Editor" or "Dear Editor-in-Chief" for regular submission, etc.) 👋
+- Option to add custom Signature (i.e. an image of your hand-written signature) ✍️
 
-## Download/Install
+## Download/Install 📦
 Please install the `jourcl` package through the package manager of your TeX distribution or download it directly from: [CTAN](https://www.ctan.org/pkg/jourcl).
 
-## Related templates
+## Related templates 🔗
 
 [A LaTeX template for a journal rebuttal letter (response to editors/reviewers)](https://github.com/firefly-cpp/latex-response-reviewers)
 
