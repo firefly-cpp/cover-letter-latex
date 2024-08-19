@@ -12,7 +12,7 @@
 \RequirePackage[iso,american]{isodate}
 \RequirePackage{fontawesome5}
 
-% no indent for whole document
+% no indent for the whole document
 \setlength\parindent{0pt}
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
@@ -23,7 +23,7 @@
 
 % Top position of reviewers
 \DeclareOption{top}{%
-    \newcommand{\addreviewersPosition}{1}
+    \newcommand{\addreviewersPosition}{1}
 }
 % Top position of reviewers
 \DeclareOption{afterToEditor}{%
@@ -46,7 +46,7 @@
 % process options
 \ProcessOptions\relax
 
-% styling of document
+% styling of the document
 %----------------------------------------------------------------------
 
 % load class
@@ -62,7 +62,7 @@
 \setlength{\headheight}{84.0pt}
 \addtolength{\textheight}{1in}
 
-% set a little indendation for paragraphs
+% set a little indentation for paragraphs
 \setlength{\parindent}{0.1em}
 
 % space between paragraphs
@@ -75,7 +75,7 @@
 \newcommand{\pImagePath}{\@ImagePath}
 
 %----------------------------------------------------------------------
-% new command for the information of author
+% new command for the information of the author
 \newcommand{\aboutme}[1]{
 %\noindent
 \fancyfoot{}
@@ -100,48 +100,48 @@
 
 % Recommended persons
 %----------------------------------------------------------------------
-% Custom Role of first recommended person
+% Custom Role of the first recommended person
 \def\FirstRecommended#1{\def\@FirstRecommended{#1}}
 \newcommand{\pFirstRecommended}{\@FirstRecommended}
-% name, surname of first recommended person
+% name, the surname of the first recommended person
 \def\FirstNameSurname#1{\def\@FirstNameSurname{#1}}
 \newcommand{\pFirstNameSurname}{\@FirstNameSurname}
-% institution of of first recommended person
+% institution of the first recommended person
 \def\FirstInstitution#1{\def\@FirstInstitution{#1}}
 \newcommand{\pFirstInstitution}{\@FirstInstitution}
-% email of of first recommended person
+% email of the first recommended person
 \def\FirstEmail#1{\def\@FirstEmail{#1}}
 \newcommand{\pFirstEmail}{\@FirstEmail}
 
-% Custom Role of second recommended person
+% Custom Role of the second recommended person
 \def\SecondRecommended#1{\def\@SecondRecommended{#1}}
 \newcommand{\pSecondRecommended}{\@SecondRecommended}
-% name, surname of second recommended person
+% name, the surname of the second recommended person
 \def\SecondNameSurname#1{\def\@SecondNameSurname{#1}}
 \newcommand{\pSecondNameSurname}{\@SecondNameSurname}
-% institution of second recommended person
+% institution of the second recommended person
 \def\SecondInstitution#1{\def\@SecondInstitution{#1}}
 \newcommand{\pSecondInstitution}{\@SecondInstitution}
-% email of second recommended person
+% email of the second recommended person
 \def\SecondEmail#1{\def\@SecondEmail{#1}}
 \newcommand{\pSecondEmail}{\@SecondEmail}
 
-% Custom Role of third recommended person
+% Custom Role of the third recommended person
 \def\ThirdRecommended#1{\def\@ThirdRecommended{#1}}
 \newcommand{\pThirdRecommended}{\@ThirdRecommended}
-% name, surname of third recommended person
+% name, the surname of the third recommended person
 \def\ThirdNameSurname#1{\def\@ThirdNameSurname{#1}}
 \newcommand{\pThirdNameSurname}{\@ThirdNameSurname}
-% institution of third recommended person
+% institution of the third recommended person
 \def\ThirdInstitution#1{\def\@ThirdInstitution{#1}}
 \newcommand{\pThirdInstitution}{\@ThirdInstitution}
-% email of third recommended person
+% email of the third recommended person
 \def\ThirdEmail#1{\def\@ThirdEmail{#1}}
 \newcommand{\pThirdEmail}{\@ThirdEmail}
 %----------------------------------------------------------------------
 % \RecommendedPerson{Role}{Name Surname}{Institution}{Email}
 %----------------------------------------------------------------------
-% command to render recommended person - check if empty, check if string is only whitespace, else table
+% command to render recommended person - check if empty, check if the string is only whitespace, else table
 \def \RecommendedPerson#1#2#3#4{ \ifempty{#1} % empty
     \else 
     \sbox0{#1}%
@@ -176,7 +176,7 @@
 % name of the institution
 \def\InstitutionName#1{\def\@InstitutionName{#1}}
 \newcommand{\pInstitutionName}{\@InstitutionName}
-% Street and House No.      
+% Street and House No.
 \def\StreetNo#1{\def\@StreetNo{#1}}
 \newcommand{\pStreetNo}{\@StreetNo}
 % Postal code, City, Country
