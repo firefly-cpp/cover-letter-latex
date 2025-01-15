@@ -44,9 +44,10 @@ Paper submission in a journal is usually accompanied by a cover letter. 📝 The
 ## 📦 Installation
 Please install the `jourcl` package through the package manager of your TeX distribution or download it directly from [CTAN](https://www.ctan.org/pkg/jourcl).
 
-## 🔗 Related templates
+## 🔗 Related templates/tools
 
 - [A LaTeX template for a journal rebuttal letter (response to editors/reviewers)](https://github.com/firefly-cpp/latex-response-reviewers)
+- [A tool that removes unused image files from a LaTeX project directory](https://github.com/firefly-cpp/latex-clean-fig)
 
 ## Disclaimer
 This software is provided as-is, and there are no guarantees that it fits your purposes or that it is bug-free. Use it at your own risk!
