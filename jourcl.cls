@@ -244,9 +244,15 @@
 \def\Editor#1{\def\@Editor{#1}}
 \newcommand{\pEditor}{\@Editor}
 
-% TODO make this optional
+% Special issue (OPTIONAL) - set via \SpecialIssue{...}, or leave unset / comment out
 \def\SpecialIssue#1{\def\@SpecialIssue{#1}}
 \newcommand{\pSpecialIssue}{\@SpecialIssue}
+% Renders the special issue sentence only when \SpecialIssue{...} has been set
+\newcommand{\SpecialIssueSentence}{%
+  \ifcsname @SpecialIssue\endcsname
+    \space Our paper belongs to the special issue \@SpecialIssue.%
+  \fi
+}
 
 %----------------------------------------------------------------------
 % Cover letter main part
