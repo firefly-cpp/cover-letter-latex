@@ -25,7 +25,7 @@
 \DeclareOption{top}{%
     \newcommand{\addreviewersPosition}{1}
 }
-% Top position of reviewers
+% Position after the "To the editor" line
 \DeclareOption{afterToEditor}{%
     \newcommand{\addreviewersPosition}{2}
 }
@@ -121,7 +121,7 @@
   \fancyhead[L]{\raisebox{\dimexpr-\height+\baselineskip}[0pt][0pt]{
     \includelogo
   }}
-  % show address on the rigt side
+  % show address on the right side
   \fancyhead[R]{\leavevmode\large
   \begin{tabular}[t]{l@{}}
     #1
