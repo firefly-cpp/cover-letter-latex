@@ -109,23 +109,28 @@
   \fi
 }
 %----------------------------------------------------------------------
+%----------------------------------------------------------------------
 % new command for the information of the author
-\newcommand{\aboutme}[1]{
-%\noindent
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-\pagestyle{fancy}
-  \fancyhf{}
-   % show logo of author's institution on the left side
-  \fancyhead[L]{\raisebox{\dimexpr-\height+\baselineskip}[0pt][0pt]{
-    \includelogo
-  }}
-  % show address on the right side
-  \fancyhead[R]{\leavevmode\large
-  \begin{tabular}[t]{l@{}}
-    #1
-  \end{tabular}}
+\newcommand{\LogoVerticalOffset}[1]{\def\@LogoVerticalOffset{#1}}
+\newcommand{\pLogoVerticalOffset}{\ifcsname @LogoVerticalOffset\endcsname \@LogoVerticalOffset\else 0pt\fi}
+
+\newcommand{\aboutme}[1]{%
+  \fancyfoot{}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+  \pagestyle{fancy}%
+  \fancyhf{}%
+  % show logo of author's institution on the left side with manual vertical offset
+  \fancyhead[L]{%
+    \raisebox{\pLogoVerticalOffset}[0pt][0pt]{\includelogo}%
+  }%
+  % show address on the rigt side
+  \fancyhead[R]{%
+    \leavevmode\large
+    \begin{tabular}[t]{l@{}}
+      #1
+    \end{tabular}%
+  }%
 }
 
 %----------------------------------------------------------------------
